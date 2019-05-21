@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="banco.BancoDados"/>
+    <fullyQualifiedTypeName name="beans.Jogos"/>
+    <fullyQualifiedTypeName name="beans.Plataforma"/>
+    <fullyQualifiedTypeName name="javax.swing.DefaultComboBoxModel"/>
+    <fullyQualifiedTypeName name="beans.Generos"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="bancoDados.BancoDados"/>
+    <fullyQualifiedTypeName name="formularios.Formulario"/>
+    <fullyQualifiedTypeName name="com.sun.media.sound.RealTimeSequencerProvider"/>
+    <fullyQualifiedTypeName name="beans.Funcionario"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="sun.security.provider.JavaKeyStore.CaseExactJKS"/>
+    <fullyQualifiedTypeName name="beans.Setor"/>
+    <fullyQualifiedTypeName name="sun.font.TrueTypeFont"/>
+    <fullyQualifiedTypeName name="beans.Estatisticas"/>
+    <fullyQualifiedTypeName name="acao.AcaoEstatisticas"/>
+    <fullyQualifiedTypeName name="beans.Usuario"/>
+    <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+    <fullyQualifiedTypeName name="formulario.Formulario"/>
+    <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
+    <fullyQualifiedTypeName name="beans.Produtos"/>
+    <fullyQualifiedTypeName name="acao.Acao"/>
+    <fullyQualifiedTypeName name="dados.Dados"/>
+    <fullyQualifiedTypeName name="cargo.Estagiario"/>
+    <fullyQualifiedTypeName name="cargo.Analista"/>
+    <fullyQualifiedTypeName name="cargo.Desenvolvedor"/>
+    <fullyQualifiedTypeName name="colaborador.Colaborador"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="padrao.Padrao"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.tools.SysPropsDumper"/>
+    <fullyQualifiedTypeName name="banco.ChequeEspecial"/>
+    <fullyQualifiedTypeName name="banco.Cheque"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

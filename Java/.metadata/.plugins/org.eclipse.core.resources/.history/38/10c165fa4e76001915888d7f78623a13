@@ -1,0 +1,29 @@
+package acao;
+
+import javax.swing.table.DefaultTableModel;
+
+import beans.Funcionario;
+import dados.Dados;
+
+public class Acao {
+
+	// Metodos CRUD
+
+	// Cadastrar Funcionario
+	public void cadastrarFuncionario(Funcionario func) {
+
+		// Adicionando no banco
+		Dados.vetorFuncionario.add(func);
+
+	}
+
+	// Read
+	public DefaultTableModel readFuncionario() {
+
+		DefaultTableModel modeloTabela = new DefaultTableModel();
+
+		modeloTabela.addColumn("Funcionário");
+		modeloTabela.addColumn("Salário Líquido");
+
+	}
+}

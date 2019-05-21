@@ -1,0 +1,25 @@
+package estado;
+
+import java.util.HashMap;
+
+public class Principal {
+	public static void main(String[] args) {
+
+		// Criar o HashMap
+		// É um vetor, basically
+		
+		//K - key, V - value
+		HashMap<String, String> estados = new HashMap<String, String>();
+		
+		//Add Dados
+		// PUT = ADD
+		estados.put("Santa Catarina", "Floripanópolis");
+		estados.put("São Paulo", "Urupema");
+		estados.put("Palmas", "Parabéns");
+		estados.put("Minas Ingerais", "Não conheço nunca mais");
+		
+		//Listar todos os valores
+		System.out.println(estados);
+
+	}
+}

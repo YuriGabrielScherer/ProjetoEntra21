@@ -1,0 +1,37 @@
+package estado;
+
+import java.util.HashMap;
+
+public class Principal {
+	public static void main(String[] args) {
+
+		// Criar o HashMap
+		// É um vetor, basically
+
+		// K - key, V - value
+		HashMap<String, String> estados = new HashMap<String, String>();
+
+		// Add Dados
+		// PUT = ADD
+		estados.put("Santa Catarina", "Floripanópolis");
+		estados.put("São Paulo", "Urupema");
+		estados.put("Palmas", "Parabéns");
+		estados.put("Minas Ingerais", "Não conheço nunca mais");
+
+		// Exibir informação específica
+		// Tipo Banco de Dados...
+		System.out.println(estados.get("São Paulo"));
+
+		// Remover
+		estados.remove("Paulo");
+
+		// Remover tudo
+		//estados.clear();
+		
+		estados.replace("São Paulo", "Teste")
+
+		// Listar todos os valores
+		// Retorna um Vetor
+		System.out.println(estados);
+	}
+}

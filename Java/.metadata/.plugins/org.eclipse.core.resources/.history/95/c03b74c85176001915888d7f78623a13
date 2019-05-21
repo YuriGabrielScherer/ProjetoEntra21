@@ -1,0 +1,106 @@
+package beans;
+
+import javax.swing.DefaultComboBoxModel;
+
+import dados.Dados;
+
+public class Setor {
+	// Definindo as variaveis de Setor
+	private String setor;
+	private double salario;
+	private double imposto;
+
+	// instanciado banco de dados
+	private Dados dados = new Dados();
+
+	// Metodos Get e Set
+	public String getSetor() {
+		return setor;
+	}
+
+	public void setSetor(String setor) {
+		this.setor = setor;
+	}
+
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+
+	public double getImposto() {
+		return imposto;
+	}
+
+	public void setImposto(double imposto) {
+		this.imposto = imposto;
+	}
+
+	// criando os setores existentens
+
+	public void popularSetores() {
+
+		Setor s1 = new Setor();
+		s1.setSetor("Estagiário");
+		s1.setSalario(900);
+
+		Setor s2 = new Setor();
+		s2.setSetor("Desenvolvedor Jr");
+		s2.setSalario(1.300);
+
+		Setor s3 = new Setor();
+		s3.setSetor("Desenvolvedor Pleno");
+		s3.setSalario(1.800);
+
+		Setor s4 = new Setor();
+		s4.setSetor("Desenvolvedor Sênior");
+		s4.setSalario(2.400);
+
+		Setor s5 = new Setor();
+		s5.setSetor("Analista de Sistemas Jr");
+		s5.setSalario(2.700);
+
+		Setor s6 = new Setor();
+		s6.setSetor("Analista de Sistemas Pleno");
+		s6.setSalario(3.200);
+
+		Setor s7 = new Setor();
+		s7.setSetor("Analista de Sistemas Sênior");
+		s7.setSalario(3.600);
+
+		Setor s8 = new Setor();
+		s8.setSetor("Arquiteto de Software");
+		s8.setSalario(4.400);
+
+		// Add no Banno
+
+		dados.vetorSetores.add(s1);
+		dados.vetorSetores.add(s2);
+		dados.vetorSetores.add(s3);
+		dados.vetorSetores.add(s4);
+		dados.vetorSetores.add(s5);
+		dados.vetorSetores.add(s6);
+		dados.vetorSetores.add(s7);
+		dados.vetorSetores.add(s8);
+
+	}
+
+	// Definindo o modelo para o combo box
+	public DefaultComboBoxModel<Setor> dadosSetores() {
+
+		DefaultComboBoxModel<Setor> modeloCombo = new DefaultComboBoxModel<Setor>();
+		for (int i = 0; i < dados.vetorSetores.size(); i++) {
+			modeloCombo.addElement(dados.vetorSetores.get(i));
+		}
+
+		return modeloCombo;
+
+	}
+
+	public String toString() {
+		return this.setor;
+	}
+
+}

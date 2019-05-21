@@ -1,0 +1,18 @@
+package padrao;
+
+//Obrigado todas as classes tenham os componentes aqui dentro
+public abstract class Padrao {
+
+	// Metodos Padroes
+	public abstract void cadastrar();
+	public abstract void alterar();
+	public abstract void selecionar();
+	public abstract void excluir();
+	
+	// Metodos para Reutilização;
+	public void metodoDeReutilizacao() {
+		
+				
+	}
+
+}

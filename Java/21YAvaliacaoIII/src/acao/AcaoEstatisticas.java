@@ -1,0 +1,7 @@
+package acao;
+
+public class AcaoEstatisticas {
+
+	// Acoes das Estatisticas
+	
+}

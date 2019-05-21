@@ -1,0 +1,9 @@
+package cargo;
+
+public class Analista extends Cargo{
+
+	// Metodo IR - Imposto de Renda
+	public void ir() {
+
+	}
+}

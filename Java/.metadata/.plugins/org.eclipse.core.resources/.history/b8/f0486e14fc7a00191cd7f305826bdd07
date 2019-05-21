@@ -1,0 +1,6 @@
+package padrao;
+
+public interface Padrao {
+
+	//Metodos Obrigatorios
+}

@@ -1,0 +1,23 @@
+package acao;
+
+import beans.Usuario;
+import dados.Dados;
+
+public class Acao {
+
+	// Metodos CRUD
+
+	// Metodo Cadastrar
+	public void cadastrarUsuario(Usuario user) {
+
+		// Realizando o cadastro
+		// Falta realizar a verificacao
+		Dados.vetorUsuario.add(user);
+
+	}
+
+	// ------
+	// Realizar Verificacoes
+	// ------
+
+}

@@ -1,0 +1,10 @@
+package estado;
+
+public class Principal {
+	public static void main(String[] args) {
+
+		// Criar o HashMap
+		// É um vetor, basically
+
+	}
+}

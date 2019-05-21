@@ -1,0 +1,6 @@
+package padrao;
+
+//Utiliza-se implements para trabalhar com Interface
+public class Usuario implements Padrao {
+
+}

@@ -1,0 +1,45 @@
+package beans;
+
+public class Usuario {
+
+	// Definindo Parametros do Usuario
+	private String nome;
+	private byte idade;
+	private double altura, imc;
+
+	// Metodos GET
+	public String getNome() {
+		return nome;
+	}
+
+	public double getImc() {
+		return imc;
+	}
+
+	public byte getIdade() {
+		return idade;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	// Metodos SET
+
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+
+	public void setIdade(byte idade) {
+		this.idade = idade;
+	}
+
+	public void setImc(double imc) {
+		this.imc = imc;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+}

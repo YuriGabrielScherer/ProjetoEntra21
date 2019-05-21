@@ -1,0 +1,63 @@
+package acao;
+
+import javax.swing.table.DefaultTableModel;
+
+import beans.Funcionario;
+import dados.Dados;
+
+public class Acao {
+
+	// Instanciando Banco de Dados
+	private Dados dados = new Dados();
+
+	// Metodos CRUD
+
+	// Cadastrar Funcionario
+	public void cadastrarFuncionario(Funcionario func) {
+
+		// Adicionando no banco
+		Dados.vetorFuncionario.add(func);
+
+	}
+
+	// Read
+	public DefaultTableModel readFuncionario() {
+
+		// Instanciando novo Modelo
+		DefaultTableModel modeloTabela = new DefaultTableModel();
+
+		// Colunas
+		modeloTabela.addColumn("Funcionário");
+		modeloTabela.addColumn("Salário Líquido");
+
+		// Adicionando Linhas
+		for (int i = 0; i < (dados.vetorFuncionario.size()); i++) {
+			modeloTabela.addRow(new Object[] { // Retornando as linhas
+					dados.vetorFuncionario.get(i).getNome(), // Na Tabela
+					dados.vetorFuncionario.get(i).getSalarioLiquido() // Func
+			});
+		}
+
+		// Retornar
+		return modeloTabela;
+
+	}
+
+	// Metodo calcular o salario
+	private Double calcularLiquido(Funcionario func) {
+
+		// Variavel
+		double liquido = func.getSalarioBruto();
+
+		// Validacoes
+		if (func.getClubeFidelidade() == true) {
+			liquido = liquido - 100;
+		}
+		if (func.getPlanoSaude() == true) {
+			liquido = liquido * 0.03;
+		}
+
+		return liquido;
+	}
+
+}

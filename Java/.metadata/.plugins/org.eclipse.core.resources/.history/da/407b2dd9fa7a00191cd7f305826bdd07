@@ -1,0 +1,11 @@
+package padrao;
+
+public abstract class Padrao {
+
+	//Metodos Padroes
+	public abstract void cadastrar();
+	public abstract void alterar();
+	public abstract void selecionar();
+	public abstract void excluir();
+	
+}

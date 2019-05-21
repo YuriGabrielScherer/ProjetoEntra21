@@ -1,0 +1,26 @@
+package padrao;
+
+//Utiliza-se implements para trabalhar com Interface
+public class Usuario implements Padrao {
+
+	public void cadastrar() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void alterar() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void excluir() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void selecionar() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,36 @@
+package principal;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+import banco.Cheque;
+import banco.ChequeEspecial;
+
+public class Principal {
+	public static void main(String[] args) {
+
+		// Poli -> Vários
+		// Morphus -> Formas
+		// Axia -> importante
+
+		Cheque obj = new ChequeEspecial();
+		obj.juros(1000);
+		obj.mensagem();
+		obj.mensagem1();
+
+		// Outro Exemplo
+		List<String> nome = new ArrayList<String>();
+		List<String> emails = new LinkedList<String>();
+
+	}
+}
+
+/*
+ * Polimorfismo - Ter-se uma classe padrão que seria usada para várias outras,
+ * mas que em alguns pontos em especifico possui classes com suas variedades
+ *
+ * exemplo de Vale Transporte Todos os funcionarios possuem 10% de valeTransporte 
+ * Apenas os workers de TI tem 5% = classe para eles com o mesmo
+ * nome... *
+ */

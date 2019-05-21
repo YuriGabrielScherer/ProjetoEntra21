@@ -1,0 +1,23 @@
+package cargo;
+
+public class Cargo {
+
+	// Atributos
+	protected String cargo;
+	protected double salario;
+	protected int nivel;
+
+	// Metodo para trabalhar com as 3 classes
+
+	// Vale Transporte
+	public void vlTrans() {
+		System.out.println("Desconto do vale transporte: " + salario * 0.06);
+	}
+
+	// Identificacao
+	public void identificacao() {
+		System.out.println("O cargo selecionado é: "+cargo);
+		
+	}
+
+}

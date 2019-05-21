@@ -1,0 +1,117 @@
+package acao;
+
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
+import beans.Produtos;
+import dados.Dados;
+
+public class Acao {
+
+	// Metodos CRUD
+
+	// Cadastrar Produto
+	public void addProduto(String nome) {
+
+		retornarCodigo(nome);
+
+	}
+
+	// Diminuir produto
+	public void tirarProduto(String nome) {
+
+	}
+
+	// Read Produtos
+	public DefaultTableModel readProduto() {
+		DefaultTableModel modelo = new DefaultTableModel();
+
+		// Add Column
+		modelo.addColumn("Produto");
+		modelo.addColumn("Quantidade");
+
+		// Add linhas
+		for (int i = 0; i < (Dados.vetorProdutos.size()); i++) {
+			modelo.addRow(new Object[] { // --------
+					Dados.vetorProdutos.get(i).getNome(), // -------
+					Dados.vetorProdutos.get(i).getQuantidade(),
+
+			});
+		}
+
+		return modelo;
+	}
+
+	// Metodo Para retornar o indice do Produto
+	private int retornarCodigo(String nome) {
+
+		// Variavel
+		int codigo = -1;
+		// Realizando a busca dentro do vetor
+		for (int i = 0; i < (Dados.vetorProdutos.size()); i++) {
+			if (nome.equals(Dados.vetorProdutos.get(i).getNome())) {
+				codigo = i;
+			}
+		}
+
+		// validacao
+		if (codigo == -1) {
+			JOptionPane.showMessageDialog(null, "Código não encontrado");
+		}
+
+		return codigo;
+
+	}
+
+	// Metodo para retornar a quantidade existente dentro do Vetor
+	private int retornarQuantidade(int index) {
+
+		// variavel
+		int quantidade = -1;
+
+		quantidade = Dados.vetorProdutos.get(index).getQuantidade();
+
+		return quantidade;
+
+	}
+
+	// Metodo para adicionar os produtos existentes
+	public void popularVetor() {
+
+		// Instanciando
+		Produtos prod1 = new Produtos();
+		prod1.setNome("Camisa Amarela");
+
+		Produtos prod2 = new Produtos();
+		prod2.setNome("Camisa Amarela");
+
+		Produtos prod3 = new Produtos();
+		prod3.setNome("Camisa Amarela");
+
+		Produtos prod4 = new Produtos();
+		prod4.setNome("Camisa Amarela");
+
+		Produtos prod5 = new Produtos();
+		prod5.setNome("Camisa Amarela");
+
+		Produtos prod6 = new Produtos();
+		prod6.setNome("Camisa Amarela");
+
+		Produtos prod7 = new Produtos();
+		prod7.setNome("Camisa Amarela");
+
+		Produtos prod8 = new Produtos();
+		prod8.setNome("Camisa Amarela");
+
+		// Add no banco
+		Dados.vetorProdutos.add(prod1);
+		Dados.vetorProdutos.add(prod2);
+		Dados.vetorProdutos.add(prod3);
+		Dados.vetorProdutos.add(prod4);
+		Dados.vetorProdutos.add(prod5);
+		Dados.vetorProdutos.add(prod6);
+		Dados.vetorProdutos.add(prod7);
+		Dados.vetorProdutos.add(prod8);
+
+	}
+}

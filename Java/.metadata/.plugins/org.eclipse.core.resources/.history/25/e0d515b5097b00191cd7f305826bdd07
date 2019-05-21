@@ -1,0 +1,33 @@
+package principal;
+
+import banco.Cheque;
+import banco.ChequeEspecial;
+
+public class Principal {
+	public static void main(String[] args) {
+
+		// Poli -> Vários
+		// Morphus -> Formas
+		// Axia -> importante
+
+		Cheque obj = new ChequeEspecial();
+		obj.juros(1000);
+		obj.mensagem();
+		obj.mensagem1();
+		
+		// Outro Exemplo
+		List<String> nome = new ArrayList<String>();
+		List<String> emails = new LinkedList<String>();
+
+	}
+}
+
+
+/*
+ 	Polimorfismo - 
+ 	Ter-se uma classe padrão que seria usada para várias outras, 
+ 
+ 
+ 
+ 
+ */

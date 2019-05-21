@@ -1,0 +1,14 @@
+
+public class Principal {
+
+	//
+
+	public static void main(String[] args) {
+
+		// Dados - Vetores
+		Integer[] dadosInt = { 1, 5, 7, 8 };
+		Double[] dadosDouble = { 7.5, 8.2, 3.6 };
+		String[] dadosString = { "PC", "Imp", "Teste" };
+
+	}
+}

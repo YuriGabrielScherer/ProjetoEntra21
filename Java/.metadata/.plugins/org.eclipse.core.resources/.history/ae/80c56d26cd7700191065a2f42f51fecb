@@ -1,0 +1,49 @@
+package acao;
+
+import javax.swing.JOptionPane;
+
+import beans.Usuario;
+import dados.Dados;
+
+public class Acao {
+
+	// Metodos CRUD
+
+	// Metodo Cadastrar
+	public void cadastrarUsuario(Usuario user) {
+
+		// Realizando o cadastro
+		if (nomeDuplicado(user.getNome()) == true) {
+			Dados.vetorUsuario.add(user);
+		} else {
+			JOptionPane.showMessageDialog(null, "Usuário com nome duplicado, tente novamente!");
+		}
+		
+		
+
+	}
+
+	// ------
+	// Realizar Verificacoes
+	// ------
+
+	private boolean nomeDuplicado(String nomeNovo) {
+
+		// Variavel
+		boolean ver = true;
+
+		// Realizando a busca
+		for (int i = 0; i < (Dados.vetorUsuario.size()); i++) {
+
+			if (nomeNovo.equalsIgnoreCase(Dados.vetorUsuario.get(i).getNome())) {
+				ver = false;
+				break;
+			}
+
+		}
+
+		return ver;
+
+	}
+
+}

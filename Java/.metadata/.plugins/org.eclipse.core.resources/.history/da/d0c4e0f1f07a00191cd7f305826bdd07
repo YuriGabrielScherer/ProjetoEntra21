@@ -1,0 +1,12 @@
+package cargo;
+
+public class Estagiario {
+
+	//Metodo IR - Imposto de Renda
+	public void ir() {
+		
+		
+		
+	}
+	
+}

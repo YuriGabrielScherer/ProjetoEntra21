@@ -1,0 +1,8 @@
+package colaborador;
+
+public class Pessoa {
+
+	// Atributos
+	protected String nomePessoa, emailPessoa, enderecoPessoa;
+	protected int idadePessoa;
+}

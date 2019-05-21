@@ -1,0 +1,266 @@
+package formulario;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JSpinner;
+import javax.swing.JButton;
+import javax.swing.border.LineBorder;
+
+import acao.Acao;
+import beans.Usuario;
+import dados.Dados;
+
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JSeparator;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+public class Formulario extends JFrame {
+
+	private JPanel contentPane;
+
+	// Campos de Text
+	private JTextField txtNome;
+	private JTextField txtAltura;
+	private JTextField txtPeso;
+	private JTextField txtIdade;
+
+	// Botoes
+	private JButton btnAlterar;
+	private JButton btnCadastrar;
+
+	private JTable tableUsuario;
+
+	// Variavel codigo Usuario
+	private static int codigoUsuario;
+
+	// Instanciando classe Acao
+	private Acao acao = new Acao();
+	private JTextField txtImc;
+
+	public Formulario() {
+		setTitle("Sistema de IMC");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 585, 506);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JLabel lblNome = new JLabel("Nome:");
+		lblNome.setBounds(34, 28, 48, 14);
+		contentPane.add(lblNome);
+
+		JLabel lblAltura = new JLabel("Altura:");
+		lblAltura.setBounds(34, 79, 48, 14);
+		contentPane.add(lblAltura);
+
+		JLabel lblIdade = new JLabel("Idade:");
+		lblIdade.setBounds(34, 53, 48, 14);
+		contentPane.add(lblIdade);
+
+		JLabel lblPeso = new JLabel("Peso:");
+		lblPeso.setBounds(34, 104, 48, 14);
+		contentPane.add(lblPeso);
+
+		txtNome = new JTextField();
+		txtNome.setBounds(92, 25, 162, 20);
+		contentPane.add(txtNome);
+		txtNome.setColumns(10);
+
+		txtAltura = new JTextField();
+		txtAltura.setColumns(10);
+		txtAltura.setBounds(92, 76, 96, 20);
+		contentPane.add(txtAltura);
+
+		txtPeso = new JTextField();
+		txtPeso.setColumns(10);
+		txtPeso.setBounds(92, 104, 96, 20);
+		contentPane.add(txtPeso);
+
+		txtIdade = new JTextField();
+		txtIdade.setColumns(10);
+		txtIdade.setBounds(92, 50, 96, 20);
+		contentPane.add(txtIdade);
+
+		btnCadastrar = new JButton("Cadastrar");
+
+		// Acao do Metodo Cadastrar
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				// Chamando metodo cadastrar
+				acao.cadastrarUsuario(novoObjeto());
+
+				// Limpando Campos
+				limparCampos();
+
+			}
+		});
+		btnCadastrar.setBounds(33, 167, 99, 23);
+		contentPane.add(btnCadastrar);
+
+		JButton btnEstatisticas = new JButton("Estatisticas");
+		btnEstatisticas.setBounds(33, 197, 130, 23);
+		contentPane.add(btnEstatisticas);
+
+		JPanel panel = new JPanel();
+		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel.setBounds(343, 44, 213, 131);
+		contentPane.add(panel);
+		panel.setLayout(null);
+
+		JLabel lblNewLabel = new JLabel("Enfeitezinho");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel.setBounds(10, 11, 193, 109);
+		panel.add(lblNewLabel);
+
+		JSeparator separator = new JSeparator();
+		separator.setBounds(10, 231, 546, 8);
+		contentPane.add(separator);
+
+		btnAlterar = new JButton("Alterar");
+		btnAlterar.setEnabled(false);
+
+		// Acao do Botao Alterar
+		btnAlterar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				// Chamando metodo alterar
+				acao.alterarUsuario(novoObjeto(), codigoUsuario);
+
+				// Limpar Campos
+				limparCampos();
+
+				// Desabilitando ele mesmo
+				btnAlterar.setEnabled(false);
+
+			}
+		});
+		btnAlterar.setBounds(142, 167, 89, 23);
+		contentPane.add(btnAlterar);
+
+		btnExcluir = new JButton("Excluir");
+
+		// Acao do Botao Excluir
+		btnExcluir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				// Chamando o metodo
+				acao.excluirUsuario(codigoUsuario);
+
+				// limparCampos
+				limparCampos();
+
+				// Desabilitando ele mesmo
+				btnExcluir.setEnabled(false);
+			}
+		});
+		btnExcluir.setBounds(244, 167, 89, 23);
+		contentPane.add(btnExcluir);
+
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(20, 250, 518, 198);
+		contentPane.add(scrollPane);
+
+		tableUsuario = new JTable();
+
+		// Acao do click do mouse na tabela
+		tableUsuario.addMouseListener(new MouseAdapter() {
+			public void mouseReleased(MouseEvent e) {
+
+				// Chamando metodo do Click do Mouse
+				clickMouse();
+
+			}
+		});
+		scrollPane.setViewportView(tableUsuario);
+
+		JLabel lblImc = new JLabel("IMC:");
+		lblImc.setBounds(34, 142, 48, 14);
+		contentPane.add(lblImc);
+
+		txtImc = new JTextField();
+		txtImc.setEditable(false);
+		txtImc.setColumns(10);
+		txtImc.setBounds(92, 135, 96, 20);
+		contentPane.add(txtImc);
+
+		// Atualizando Tabela
+		atualizarTabela();
+
+		setResizable(false);
+		setLocationRelativeTo(null);
+	}
+
+	// Metodo popular Tabela
+	private void atualizarTabela() {
+
+		// Atualizando tabela
+		tableUsuario.setModel(acao.readUsuario());
+	}
+
+	// Metodo Criar Objeto Usuario
+	private Usuario novoObjeto() {
+
+		// Instanciando
+		Usuario usuario = new Usuario();
+
+		usuario.setNome(txtNome.getText());
+		usuario.setIdade(Byte.parseByte(txtIdade.getText()));
+		usuario.setPeso(Double.parseDouble(txtPeso.getText()));
+		usuario.setAltura(Double.parseDouble(txtAltura.getText()));
+
+		usuario.setImc(acao.calculaImc(usuario.getPeso(), usuario.getAltura()));
+
+		return usuario;
+
+	}
+
+	// Metodo Click do Mouse na Tabela
+	private void clickMouse() {
+
+		// Pegando o codigo do Usuario
+		codigoUsuario = tableUsuario.getSelectedRow();
+
+		// Atribuindo valores
+		txtNome.setText(Dados.vetorUsuario.get(codigoUsuario).getNome());
+		txtIdade.setText(String.valueOf(Dados.vetorUsuario.get(codigoUsuario).getIdade()));
+		txtPeso.setText(String.valueOf(Dados.vetorUsuario.get(codigoUsuario).getPeso()));
+		txtAltura.setText(String.valueOf(Dados.vetorUsuario.get(codigoUsuario).getAltura()));
+		txtImc.setText(String.valueOf(Dados.vetorUsuario.get(codigoUsuario).getImc()));
+
+		// Ativando botoes
+		btnAlterar.setEnabled(true);
+
+	}
+
+	// Metodo Limpar Campos
+	private void limparCampos() {
+
+		// Limpando campos
+		txtNome.setText("");
+		txtImc.setText("");
+		txtIdade.setText("");
+		txtPeso.setText("");
+		txtAltura.setText("");
+
+		// Atualizar Tabela
+		atualizarTabela();
+
+	}
+
+}

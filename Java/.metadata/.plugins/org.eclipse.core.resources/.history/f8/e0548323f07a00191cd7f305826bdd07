@@ -1,0 +1,9 @@
+package cargo;
+
+public class Desenvolvedor {
+	// Metodo IR - Imposto de Renda
+	public void ir() {
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package colaborador;
+
+public class Colaborador extends Pessoa {
+
+	// Atributos
+	private String cargoColaborador;
+	private double salarioColaborador;
+}

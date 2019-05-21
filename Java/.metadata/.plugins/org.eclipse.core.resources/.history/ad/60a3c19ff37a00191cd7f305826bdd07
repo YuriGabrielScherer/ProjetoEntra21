@@ -1,0 +1,26 @@
+package principal;
+
+import cargo.Analista;
+import cargo.Desenvolvedor;
+import cargo.Estagiario;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		// Instanciar objetos
+		Estagiario estagiario = new Estagiario();
+		Analista analista = new Analista(5000, 2);
+		Desenvolvedor desen = new Desenvolvedor(3000, 3);
+
+		// Chamando os metodos de identificacao
+		estagiario.identificacao();
+		analista.identificacao();
+		desen.identificacao();
+
+		//Metodos de vale transporte
+		estagiario.vlTrans();
+		analista.vlTrans();
+		desen.vlTrans();
+	}
+}

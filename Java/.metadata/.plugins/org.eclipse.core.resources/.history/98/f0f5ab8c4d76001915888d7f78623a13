@@ -1,0 +1,42 @@
+package beans;
+
+import dados.Dados;
+
+// Definindo as variaveis de Setor
+private String setor;private double salario;
+
+// Metodos Get e Set
+public String getSetor(){return setor;}
+
+public void setSetor(String setor){this.setor=setor;}
+
+public double getSalario(){return salario;}
+
+public void setSalario(double salario){this.salario=salario;}
+
+// criando os setores existentens
+
+public void popularSetores(){
+
+Setor s1=new Setor();s1.setSetor("Estagiário");s1.setSalario(900);
+
+Setor s1=new Setor();s1.setSetor("Desenvolvedor Jr");s1.setSalario(1.300);
+
+Setor s1=new Setor();s1.setSetor("Desenvolvedor Pleno");s1.setSalario(1.800);
+
+Setor s1=new Setor();s1.setSetor("Desenvolvedor Sênior");s1.setSalario(2.400);
+
+Setor s1=new Setor();s1.setSetor("Analista de Sistemas Jr");s1.setSalario(2.700);
+
+Setor s1=new Setor();s1.setSetor("Analista de Sistemas Pleno");s1.setSalario(3.200);
+
+Setor s1=new Setor();s1.setSetor("Analista de Sistemas Sênior");s1.setSalario(3.600);
+
+Setor s1=new Setor();s1.setSetor("Arquiteto de Software");s1.setSalario(4.400);
+
+// instanciado banco de dados
+Dados dados=new Dados();
+
+}
+
+}

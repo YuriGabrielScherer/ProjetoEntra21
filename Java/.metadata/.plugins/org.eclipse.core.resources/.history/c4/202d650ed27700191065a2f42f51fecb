@@ -1,0 +1,12 @@
+package dados;
+
+import java.util.ArrayList;
+
+import beans.Usuario;
+
+public class Dados {
+
+	// Declarando array
+	public static ArrayList<Usuario> vetorUsuario = new ArrayList<Usuario>();
+
+}

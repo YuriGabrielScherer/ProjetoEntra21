@@ -1,0 +1,21 @@
+
+public class Principal {
+
+	// Método Estático de Exibição
+	// Padrao do Generics: E - Elements
+	// Passamos como parametro o vetor E porque nao sabemos de qual tipo vai ser o vetor, por isso generics
+	public static <E> void exibirDados(E[] vetor) {
+		
+				
+	}
+
+	// Método Main
+	public static void main(String[] args) {
+
+		// Dados - Vetores
+		Integer[] dadosInt = { 1, 5, 7, 8 };
+		Double[] dadosDouble = { 7.5, 8.2, 3.6 };
+		String[] dadosString = { "PC", "Imp", "Teste" };
+
+	}
+}

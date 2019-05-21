@@ -1,0 +1,7 @@
+package beans;
+
+public class Setor {
+
+	// Definindo as variaveis de Setor
+	private String setor;
+}

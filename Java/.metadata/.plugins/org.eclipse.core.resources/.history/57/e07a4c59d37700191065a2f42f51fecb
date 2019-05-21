@@ -1,0 +1,74 @@
+package acao;
+
+import javax.swing.table.DefaultTableModel;
+
+import beans.Estatisticas;
+import dados.Dados;
+
+public class AcaoEstatisticas {
+
+	// Popular Estatisticas
+	public void popularEstatisticas() {
+
+		// Instanciar
+
+		Estatisticas est = new Estatisticas();
+		est.setEstatistica("Muito abaixo do Peso");
+
+		Estatisticas est1 = new Estatisticas();
+		est1.setEstatistica("Abaixo do Peso");
+
+		Estatisticas est2 = new Estatisticas();
+		est2.setEstatistica("Peso normal");
+
+		Estatisticas est3 = new Estatisticas();
+		est3.setEstatistica("Acima do peso");
+
+		Estatisticas est4 = new Estatisticas();
+		est4.setEstatistica("Obesidade I");
+
+		Estatisticas est5 = new Estatisticas();
+		est5.setEstatistica("Obesidade II (severa)");
+
+		Estatisticas est6 = new Estatisticas();
+		est6.setEstatistica("Obesidade III (mórbida)");
+
+		// Add no Banco
+		Dados.vetorEstatisticas.add(est);
+		Dados.vetorEstatisticas.add(est1);
+		Dados.vetorEstatisticas.add(est2);
+		Dados.vetorEstatisticas.add(est3);
+		Dados.vetorEstatisticas.add(est4);
+		Dados.vetorEstatisticas.add(est5);
+		Dados.vetorEstatisticas.add(est6);
+
+	}
+
+	// Metodo Retornar o Modelo de Tabela
+	public DefaultTableModel readEst() {
+
+		// Instanciar
+		DefaultTableModel modelo = new DefaultTableModel();
+
+		// Add Coluns
+		modelo.addColumn("Estatistica");
+		modelo.addColumn("Quantidade");
+
+		// Linhas
+		for (int i = 0; i < (Dados.vetorEstatisticas.size()); i++) {
+			modelo.addRow(new Object[] { // -------
+					Dados.vetorEstatisticas.get(i).getEstatistica(), // --------
+					Dados.vetorEstatisticas.get(i).getQnt(), });
+		}
+
+		// retornando
+		return modelo;
+
+	}
+
+	// Verificando qual IMC o rapaz se encaixa
+	public int verificaSituacao() {
+
+	}
+
+}

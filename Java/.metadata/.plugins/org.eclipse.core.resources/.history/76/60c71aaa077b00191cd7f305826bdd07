@@ -1,0 +1,17 @@
+package principal;
+
+import banco.Cheque;
+import banco.ChequeEspecial;
+
+public class Principal {
+	public static void main(String[] args) {
+
+		// Poli -> Vários
+		// Morphus -> Formas
+		// Axia -> importante
+
+		Cheque obj = new ChequeEspecial();
+		obj.juros(1000);
+
+	}
+}

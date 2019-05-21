@@ -1,0 +1,17 @@
+package acao;
+
+import beans.Funcionario;
+import dados.Dados;
+
+public class Acao {
+
+	// Metodos CRUD
+
+	// Cadastrar Funcionario
+	public void cadastrarFuncionario(Funcionario func) {
+
+		// Adicionando no banco
+		Dados.vetorFuncionario.add(func);
+
+	}
+}

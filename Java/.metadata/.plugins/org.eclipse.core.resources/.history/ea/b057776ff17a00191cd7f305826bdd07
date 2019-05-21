@@ -1,0 +1,17 @@
+package cargo;
+
+public class Cargo {
+
+	// Atributos
+	protected String cargo;
+	protected double salario;
+	protected int nivel;
+
+	// Metodo para trabalhar com as 3 classes
+
+	// Vale Transporte
+	public void vlTrans() {
+
+	}
+
+}

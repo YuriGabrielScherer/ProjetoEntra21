@@ -1,0 +1,40 @@
+package acao;
+
+import beans.Estatisticas;
+import dados.Dados;
+
+public class AcaoEstatisticas {
+
+	// Popular Estatisticas
+	public void popularEstatisticas() {
+
+		// Instanciar
+		Estatisticas est = new Estatisticas();
+		est.setEstatistica("Abaixo do Peso");
+
+		Estatisticas est2 = new Estatisticas();
+		est2.setEstatistica("Peso normal");
+
+		Estatisticas est3 = new Estatisticas();
+		est3.setEstatistica("Acima do peso");
+
+		Estatisticas est4 = new Estatisticas();
+		est4.setEstatistica("Obesidade I");
+
+		Estatisticas est5 = new Estatisticas();
+		est5.setEstatistica("Obesidade II (severa)");
+
+		Estatisticas est6 = new Estatisticas();
+		est6.setEstatistica("Obesidade III (mórbida)");
+
+		// Add no Banco
+		Dados.vetorEstatisticas.add(est);
+		Dados.vetorEstatisticas.add(est2);
+		Dados.vetorEstatisticas.add(est3);
+		Dados.vetorEstatisticas.add(est4);
+		Dados.vetorEstatisticas.add(est5);
+		Dados.vetorEstatisticas.add(est6);
+
+	}
+
+}

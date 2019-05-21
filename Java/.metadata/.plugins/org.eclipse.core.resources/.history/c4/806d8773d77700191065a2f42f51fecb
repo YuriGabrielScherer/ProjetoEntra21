@@ -1,0 +1,81 @@
+package beans;
+
+import javax.swing.JOptionPane;
+
+public class Usuario {
+
+	// Definindo Parametros do Usuario
+	private String nome;
+	private byte idade;
+	private double altura, imc, peso;
+
+	// Variavel verificadora
+	private boolean verDados = true;
+
+	// Metodos GET
+
+	public double getPeso() {
+		return peso;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public double getImc() {
+		return imc;
+	}
+
+	public byte getIdade() {
+		return idade;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public boolean getVerDados() {
+		return verDados;
+	}
+
+	// Metodos SET
+
+	public void setAltura(double altura) {
+		try {
+			this.altura = altura;
+		} catch (Exception e) {
+			verDados = false;
+			JOptionPane.showMessageDialog(null, "insira um valor válido para a altura.");
+
+		}
+
+	}
+
+	public void setIdade(byte idade) {
+		try {
+			this.idade = idade;
+		} catch (Exception e) {
+			verDados = false;
+			JOptionPane.showMessageDialog(null, "insira um valor válido para a idade.");
+		}
+	}
+
+	public void setImc(double imc) {
+		this.imc = imc;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setPeso(double peso) {
+
+		try {
+			this.peso = peso;
+		} catch (Exception e) {
+			verDados = false;
+			JOptionPane.showMessageDialog(null, "insira um valor válido para o peso.");
+		}
+	}
+
+}

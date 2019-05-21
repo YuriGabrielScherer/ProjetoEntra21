@@ -1,0 +1,10 @@
+package banco;
+
+public class ChequeEspecial {
+
+	// metodo de juros
+	public void juros(double valor) {
+		System.out.println("Valor simbólico: " + valor * 0.20);
+
+	}
+}

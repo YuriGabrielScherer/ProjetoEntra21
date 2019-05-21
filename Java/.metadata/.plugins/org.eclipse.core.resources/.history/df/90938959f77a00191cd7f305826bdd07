@@ -1,0 +1,11 @@
+package principal;
+
+import colaborador.Colaborador;
+
+public class Principal {
+	public static void main(String[] args) {
+
+		// Instanciar objeto da Classe Colaborador
+		Colaborador colaborador = new Colaborador("Yuri", "yuriGoogle", "Velha Grande", 18, "Diretor", 10000);
+	}
+}

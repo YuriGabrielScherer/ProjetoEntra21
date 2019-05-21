@@ -1,0 +1,25 @@
+package colaborador;
+
+public class Pessoa {
+
+	// Atributos
+	protected String nomePessoa, emailPessoa, enderecoPessoa;
+	protected int idadePessoa;
+
+	// Metodo para exibir os dados da Pessoa
+	private void exibirDadosPessoa() {
+
+		System.out.println("Nome: " + nomePessoa + "\nE-mail: " + emailPessoa + "\nEndereço: " + enderecoPessoa
+				+ "\nIdade: " + idadePessoa);
+
+	}
+
+	// Metodo para chamar os metodos Privados
+	// Nesse caso vai ser o Construtor
+	public Pessoa() {
+
+		//Chamando o metodo exibirDadosPessoa, que é privado
+		exibirDadosPessoa();
+	}
+
+}

@@ -1,0 +1,39 @@
+package acao;
+
+import javax.swing.table.DefaultTableModel;
+
+import beans.Funcionario;
+import dados.Dados;
+
+public class Acao {
+
+	// Instanciando Banco de Dados
+	private Dados dados = new Dados();
+
+	// Metodos CRUD
+
+	// Cadastrar Funcionario
+	public void cadastrarFuncionario(Funcionario func) {
+
+		// Adicionando no banco
+		Dados.vetorFuncionario.add(func);
+
+	}
+
+	// Read
+	public DefaultTableModel readFuncionario() {
+
+		// Instanciando novo Modelo
+		DefaultTableModel modeloTabela = new DefaultTableModel();
+
+		// Colunas
+		modeloTabela.addColumn("Funcionário");
+		modeloTabela.addColumn("Salário Líquido");
+
+		// Adicionando Linhas
+		for (int i = 0; i < (dados.vetor); i++) {
+
+		}
+
+	}
+}

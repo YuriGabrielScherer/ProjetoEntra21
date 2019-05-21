@@ -1,0 +1,17 @@
+package principal;
+
+import cargo.Analista;
+import cargo.Estagiario;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		
+		//Instanciar objetos
+		Estagiario estagiaro = new Estagiario();
+		Analista analista = new Analista(5000, 2)
+		Desenvolvedor desenvolvedor = new Desenvolvedor(3000,3)
+		
+		
+	}
+}
